@@ -13,7 +13,18 @@
     display: block;
     width: $image-width;
     height: $image-height;
-    margin: 30px auto 45px;
+    margin: 15px auto 30px;
+    padding: 12px 0;
+    border: 3px solid $card-border-color;
+    border-color: transparent;
+
+    transition: transform 1s ease, border-color linear;
+
+    &:hover {
+      transform: scale(1.2);
+      border-color: $card-border-color;
+      border-radius: 5px;
+    }
   }
 
   &__info {
@@ -64,6 +75,10 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    transition: background-color 0.5s ease-in-out,
+      color 0.3s,
+      border-color 0.3s
+      ;
 
     &:hover {
       background: $default-main-color;
